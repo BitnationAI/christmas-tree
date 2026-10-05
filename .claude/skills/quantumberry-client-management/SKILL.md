@@ -58,5 +58,10 @@ Pending with Titans: Karabo's graphics skill is **not yet built**; one-on-one AI
 ## Working preferences (Chad)
 Concise, practical, data-driven. Confirm before anything outward-facing (emails to clients, posting). Show drafts first. Note when a fact is inferred versus confirmed.
 
+## QuantumBerry brand for PDFs and documents
+Reference files (Chad's Drive folder): QuantumBerry_AI_Company_Profile-1.pdf (A4), QuantumBerry_AI_Company_Overview.pdf and QuantumBerry_AI_Hermes_Capability_Deck-1.pdf (16:9 slides). Style: near-black #0B0B0B cover with subtle grid and two-tone top bar (red #C0392B, blue #1571AA); light interior pages with logo header, mono footer and reference number (e.g. QB-PI-2026-01); fonts Syne ExtraBold/Bold (headings), DM Sans (body), DM Mono (small caps labels); red/blue accent rules; emblem logo (red arc, blue crystal); tagline "Automate Everything. Engineer the Future." and "Intelligent systems. Real world impact."; "Applied AI Engineering Studio, Cape Town". Voice: plain, engineering-led ("studio, not an agency"), no hype, no invented stats. Facts allowed from the profile: Chad is Microsoft and CompTIA certified and a CEH; partners STRATAIGENT Solutions (co-delivery) and Aikido Security (security tooling); NVIDIA 6G Developer Program access; service lines Audit, Hermes agents, AI websites/interfaces, AI cybersecurity; care tiers exist (do not publish rates unless asked).
+The Dr Faul partner pack is built from `dr-faul-pack/template.html` with `python3 dr-faul-pack/build.py` (Chromium headless). Assets in `dr-faul-pack/assets`.
+
 ## Changelog
+- 5 Oct 2026: Dr Faul partner pack rebuilt in the QuantumBerry brand (9 pages, no prices, no client names).
 - 5 Oct 2026: Skill created. Linear reorganised: Titans consolidated to one project with milestones; milestones added for other projects; labels (Waiting on client, Owner: name, Client/Prospect/Partner/Internal); Urgent removed everywhere; Dr Faul recorded as CEO of Titans; Alfonso = Driver Three; Michelle = PA to Dr Faul.
