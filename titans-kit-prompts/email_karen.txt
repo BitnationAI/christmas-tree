@@ -1,0 +1,42 @@
+[ATTACH Titans-Kit-Design-Prompt-Pack.pdf BEFORE SENDING, then delete this line]
+
+QUANTUMBERRY AI
+From design to automation, we make technology think for you.
+
+Designing the
+new Titans kit
+
+Hi Karen,
+
+The prompt pack for the new men's and women's playing shirts and pants is attached. It works in both Gemini and ChatGPT, and it fixes the two things we spoke about: logos coming out wrong, and small edits redoing the whole design.
+
+You start with a storyboard of each idea, pick the best one, and refine it step by step. The official logo files are always used, so the logos stay intact.
+
+ATTACHED
+Titans Kit Design Prompt Pack
+PDF, 8 pages, copy-paste prompts
+
+— What is inside
+Step 1: Storyboard of each shirt idea: front, back, side, pants and details
+Step 2: Clean drawings for the supplier, with blank logo spaces
+Step 3: A photo of a player wearing the kit
+Step 4: Small edits without redoing the design
+Logos: Always the official files, placed last by hand
+
+— Next step
+Let's do a short call. I will take you through the prompts and run the first storyboard with you.
+Please have the official logo files (transparent PNGs) and the brand colour codes ready.
+
+Book our call: https://cal.com/quantumberry/30min-free-consult
+or simply reply with a time that suits you.
+
+When you have a moment, could you also send the clothing inventory sheets with the player lists and item costs? That is what populates the stock-take app.
+
+Chat soon,
+Chad Douglas
+Founder & CEO | QuantumBerry AI
+chad@quantumberryai.co.za
+quantumberryai.co.za · Cape Town, South Africa
+
+INTELLIGENT SYSTEMS.
+REAL WORLD IMPACT.
