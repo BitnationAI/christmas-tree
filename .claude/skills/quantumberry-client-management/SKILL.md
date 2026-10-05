@@ -21,6 +21,9 @@ After any change to a client, contact, status, price, date or to the process its
 
 Extra rules: duplicates are marked Duplicate (issues, with a duplicateOf link first) or Canceled and prefixed "[Duplicate]" or "[Merged]" (projects), because the Linear connector cannot delete; Chad deletes manually. Issue descriptions end with "_Source: ..._". Put contacts in descriptions, not only in labels.
 
+## Booking link (mandatory)
+Always use **https://cal.com/quantumberry/30min-free-consult** (free 30-minute consult) in client, partner and prospect emails and documents. Do not use cal.com/quantumberry/ai-discussion or cal.com/quantumberry/titans-cricket unless Chad asks (Chad, 5 Oct 2026).
+
 ## Where information comes from
 - **Gmail** (chad@quantumberryai.co.za): client emails, cc's, sent proposals. Search by name or domain, read threads in full.
 - **Fathom**: call summaries and action items (search by keyword, then read the summary).
@@ -63,5 +66,6 @@ Reference files (Chad's Drive folder): QuantumBerry_AI_Company_Profile-1.pdf (A4
 The Dr Faul partner pack is built from `dr-faul-pack/template.html` with `python3 dr-faul-pack/build.py` (Chromium headless). Assets in `dr-faul-pack/assets`.
 
 ## Changelog
+- 5 Oct 2026: Booking link set to cal.com/quantumberry/30min-free-consult; Dr Faul pack and draft email updated.
 - 5 Oct 2026: Dr Faul partner pack rebuilt in the QuantumBerry brand (9 pages, no prices, no client names).
 - 5 Oct 2026: Skill created. Linear reorganised: Titans consolidated to one project with milestones; milestones added for other projects; labels (Waiting on client, Owner: name, Client/Prospect/Partner/Internal); Urgent removed everywhere; Dr Faul recorded as CEO of Titans; Alfonso = Driver Three; Michelle = PA to Dr Faul.
