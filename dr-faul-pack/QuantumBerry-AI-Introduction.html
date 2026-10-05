@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>QuantumBerry AI | Introduction for partners</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root{
+    --ink:#0B1020; --ink2:#141B33; --berry:#7C3AED; --berry2:#A78BFA;
+    --teal:#22D3EE; --mint:#34D399; --paper:#FFFFFF; --mist:#F4F2FB; --text:#1B2038; --muted:#5B6180;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:"Liberation Sans","Helvetica Neue",Arial,sans-serif;color:var(--text);font-size:11.5pt;line-height:1.5}
+  .page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;padding:20mm 18mm 18mm}
+  .page:last-child{page-break-after:auto;break-after:auto}
+  .dark{background:var(--ink);color:#fff}
+  .light{background:var(--paper)}
+  .tint{background:var(--mist)}
+  .eyebrow{font-size:9pt;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--berry)}
+  .dark .eyebrow{color:var(--teal)}
+  h1{font-size:46pt;line-height:1.02;letter-spacing:-.02em;font-weight:800}
+  h2{font-size:27pt;line-height:1.1;letter-spacing:-.015em;font-weight:800;margin:8px 0 14px}
+  h3{font-size:14pt;line-height:1.2;font-weight:800;margin-bottom:6px}
+  p{margin-bottom:10px}
+  .lead{font-size:14pt;line-height:1.45;color:var(--muted)}
+  .dark .lead{color:#C7CBE6}
+  .grad{color:var(--teal)}
+  .foot{position:absolute;left:18mm;right:18mm;bottom:10mm;display:flex;justify-content:space-between;font-size:8pt;letter-spacing:.12em;text-transform:uppercase;color:#8A90B0}
+  .dark .foot{color:#6C7396}
+  .glow1{position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;top:-120px;background:radial-gradient(circle,rgba(124,58,237,.55),rgba(124,58,237,0) 68%)}
+  .glow2{position:absolute;width:460px;height:460px;border-radius:50%;left:-180px;bottom:-140px;background:radial-gradient(circle,rgba(34,211,238,.35),rgba(34,211,238,0) 68%)}
+  .wordmark{font-weight:800;letter-spacing:.3em;font-size:11pt}
+  .wordmark b{color:var(--teal)}
+  .rule{height:4px;width:64px;background:linear-gradient(90deg,var(--berry),var(--teal));border-radius:2px;margin:16px 0}
+
+  /* cover */
+  .cover{display:flex;flex-direction:column;justify-content:space-between}
+  .cover h1{margin-top:70mm}
+  .cover .lead{max-width:125mm;margin-top:14px}
+  .cover .meta{font-size:9pt;letter-spacing:.2em;text-transform:uppercase;color:#8A90B0;display:flex;justify-content:space-between}
+
+  /* shift */
+  .contrast{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 18px}
+  .box{border-radius:14px;padding:16px 18px}
+  .box.old{background:#fff;border:1px solid #DAD6EE}
+  .box.new{background:linear-gradient(135deg,var(--berry),#5B21B6);color:#fff}
+  .box h3{font-size:12pt;letter-spacing:.04em;text-transform:uppercase}
+  .box ul{list-style:none}
+  .box li{padding:5px 0;border-top:1px solid rgba(120,120,160,.25);font-size:11pt}
+  .box.new li{border-top:1px solid rgba(255,255,255,.25)}
+  .stat{display:flex;gap:12px;margin-top:6px}
+  .stat div{flex:1;background:#fff;border-radius:12px;padding:14px;border-left:5px solid var(--teal)}
+  .stat strong{display:block;font-size:12.5pt;margin-bottom:3px}
+  .stat span{font-size:10.5pt;color:var(--muted)}
+
+  /* steps */
+  .steps{margin-top:16px}
+  .step{display:flex;gap:16px;align-items:flex-start;background:var(--ink2);border:1px solid #232B4D;border-radius:16px;padding:16px 18px;margin-bottom:12px}
+  .num{flex:0 0 52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--berry),var(--teal));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18pt;color:#fff}
+  .step h3{color:#fff;margin-bottom:2px}
+  .step p{color:#C7CBE6;margin:0;font-size:11pt}
+  .callout{margin-top:16px;border-radius:14px;padding:16px 20px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.4);font-size:12.5pt;color:#E6F9FD}
+
+  /* cards */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+  .card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 0 #E4E0F5;border-top:5px solid var(--berry)}
+  .card:nth-child(2){border-top-color:var(--teal)} .card:nth-child(3){border-top-color:var(--mint)} .card:nth-child(4){border-top-color:#F472B6}
+  .card .tag{font-size:8.5pt;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:6px}
+  .card p{font-size:10.8pt;color:var(--muted);margin:0}
+  .ico{font-size:22pt;margin-bottom:4px}
+
+  /* lists */
+  .check{list-style:none;margin:8px 0}
+  .check li{position:relative;padding:9px 0 9px 34px;border-bottom:1px solid #E7E4F4}
+  .check li:before{content:"";position:absolute;left:0;top:11px;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--berry),var(--teal))}
+  .check li:after{content:"";position:absolute;left:7px;top:15px;width:5px;height:9px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+  .check strong{display:block}
+  .check span{color:var(--muted);font-size:10.8pt}
+  .dark .check li{border-bottom-color:#232B4D}.dark .check span{color:#C7CBE6}
+
+  .quote{border-left:5px solid var(--berry);background:#fff;border-radius:0 14px 14px 0;padding:16px 20px;font-size:14pt;font-weight:700;line-height:1.35;margin:16px 0}
+  .dark .quote{background:var(--ink2);border-left-color:var(--teal);color:#fff}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .tl{display:flex;gap:10px;margin:14px 0 4px}
+  .tl div{flex:1;background:var(--ink2);border:1px solid #232B4D;border-radius:12px;padding:12px;text-align:center}
+  .tl b{display:block;color:var(--teal);font-size:9pt;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+  .tl span{font-size:10.5pt;color:#E6E8F7}
+  .pill{display:inline-block;background:rgba(124,58,237,.1);color:var(--berry);border-radius:20px;padding:3px 12px;font-size:9.5pt;font-weight:700;margin:0 6px 6px 0}
+  .dark .pill{background:rgba(34,211,238,.12);color:var(--teal)}
+
+  /* closing */
+  .who{display:flex;gap:16px;align-items:center;background:var(--ink2);border:1px solid #232B4D;border-radius:16px;padding:18px;margin:16px 0}
+  .avatar{flex:0 0 64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--berry),var(--teal));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20pt}
+  .cta{background:linear-gradient(135deg,var(--berry),#5B21B6);border-radius:18px;padding:22px 24px;margin-top:6px}
+  .cta h3{font-size:18pt;margin-bottom:6px}
+  .cta p{color:#EDE9FE;margin-bottom:12px}
+  .cta a, .contact a{color:#fff;text-decoration:none;font-weight:700}
+  .contact{display:grid;grid-template-columns:1fr;gap:8px;font-size:10.5pt;margin-top:8px}
+  .contact div{background:rgba(255,255,255,.12);border-radius:10px;padding:8px 14px;display:flex;justify-content:space-between;align-items:center}
+  .contact small{display:block;font-size:8pt;letter-spacing:.14em;text-transform:uppercase;color:#DDD6FE}
+.page > :not(.foot):not(.glow1):not(.glow2){zoom:var(--z,1)}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="page dark cover">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div style="position:relative"><div class="wordmark">QUANTUM<b>BERRY</b> AI</div></div>
+  <div style="position:relative">
+    <h1>AI that works<br><span class="grad">while you sleep.</span></h1>
+    <div class="rule"></div>
+    <p class="lead">We help South African businesses stop experimenting with AI and start getting results from it. Safely, practically, and without the guesswork.</p>
+  </div>
+  <div class="meta" style="position:relative"><span>Introduction for partners</span><span>Cape Town, South Africa</span></div>
+</section>
+
+<!-- 2 WHY NOW -->
+<section class="page tint" style="--z:1.14">
+  <div class="eyebrow">Why now</div>
+  <h2>The AI race is no longer about tools.<br>It is about <span style="color:var(--berry)">who gets the work done.</span></h2>
+  <p class="lead">Almost every business has tried ChatGPT by now. The ones pulling ahead have moved on to something different: AI that takes work off people's plates, every day, without being asked.</p>
+  <div class="contrast">
+    <div class="box old"><h3 style="color:var(--muted)">AI tools</h3><ul><li>Wait for someone to type a prompt</li><li>Forget everything between chats</li><li>Help one person at a time</li><li>Add one more thing to learn</li></ul></div>
+    <div class="box new"><h3>AI agents</h3><ul><li>Take initiative on routine work</li><li>Learn how your business runs</li><li>Support whole teams and workflows</li><li>Get better every week they run</li></ul></div>
+  </div>
+  <div class="stat">
+    <div><strong>Guesswork is expensive</strong><span>Without a plan, businesses pay to roll out tools that do not fit the work.</span></div>
+    <div><strong>Staff need a new skill</strong><span>Not just prompting, but briefing, supervising and checking an AI colleague.</span></div>
+    <div><strong>Threats are AI-powered</strong><span>Attackers already use AI. Defence has to keep pace.</span></div>
+  </div>
+  <div class="quote">QuantumBerry AI exists to close that gap: a clear plan first, then systems that deliver real, measurable impact.</div>
+  <div class="foot"><span>QuantumBerry AI</span><span>02</span></div>
+</section>
+
+<!-- 3 APPROACH -->
+<section class="page dark" style="--z:1.45">
+  <div class="glow1" style="opacity:.6"></div>
+  <div class="eyebrow">Our approach</div>
+  <h2 style="position:relative">Plan it. Build it. <span class="grad">Let it run.</span></h2>
+  <p class="lead" style="position:relative">Three steps, in the right order. Nothing gets built until we know it is worth building.</p>
+  <div class="steps" style="position:relative">
+    <div class="step"><div class="num">1</div><div><h3>Audit</h3><p>We map your departments, workflows and the systems you already use. We show you where AI will move the needle, and where it would be overkill.</p></div></div>
+    <div class="step"><div class="num">2</div><div><h3>Build</h3><p>We deliver the roadmap in focused phases: agents, automations, web platforms and secure integrations. Small wins first, then scale.</p></div></div>
+    <div class="step"><div class="num">3</div><div><h3>Run</h3><p>Your agents keep learning and improving. We stay close: training your people, keeping systems secure and extending what works.</p></div></div>
+  </div>
+  <div class="callout" style="position:relative"><strong>The audit protects your budget.</strong> Rolling out AI without one is guesswork. With one, you know exactly what you are buying and why.</div>
+  <div class="foot"><span>QuantumBerry AI</span><span>03</span></div>
+</section>
+
+<!-- 4 WHAT WE DO -->
+<section class="page tint" style="--z:1.2">
+  <div class="eyebrow">What we do</div>
+  <h2>Four ways we put AI to work for you</h2>
+  <p class="lead">Use one, or combine them. Everything is modular and built around what your business actually needs.</p>
+  <div class="cards">
+    <div class="card"><div class="ico">&#x1F50D;</div><div class="tag">Start here</div><h3>AI Audit and Roadmap</h3><p>A clear, costed plan showing where AI will save time, cut cost or win revenue, from a 12-month plan to a 3 to 5 year view.</p></div>
+    <div class="card"><div class="ico">&#x1F916;</div><div class="tag">Your AI colleague</div><h3>Hermes AI Agents</h3><p>Agents that learn your business and take on real work: inboxes, reporting, research, scheduling, content and more.</p></div>
+    <div class="card"><div class="ico">&#x1F6E1;</div><div class="tag">Stay protected</div><h3>AI Security</h3><p>AI-driven security testing to find weak points before attackers do, with a recognised security standard to show for it.</p></div>
+    <div class="card"><div class="ico">&#x1F680;</div><div class="tag">Move fast</div><h3>AI Websites and Apps</h3><p>Websites, portals, booking and database apps, built in weeks rather than months, at a fraction of traditional agency effort.</p></div>
+  </div>
+  <div class="quote" style="margin-top:20px">Plus hands-on, department-specific AI training, so your people know when to use AI, which tool to pick, and how to check the result.</div>
+  <div class="foot"><span>QuantumBerry AI</span><span>04</span></div>
+</section>
+
+<!-- 5 AUDIT -->
+<section class="page light" style="--z:1.4">
+  <div class="eyebrow">Service 1 &middot; The AI Audit</div>
+  <h2>Know exactly where AI will pay off,<br>before you spend a rand</h2>
+  <p class="lead">The audit is the smartest first move any business can make. It replaces assumptions with a plan you can take to your board.</p>
+  <div class="two">
+    <div>
+      <h3 style="margin-top:8px">What you get</h3>
+      <ul class="check">
+        <li><strong>A map of your business</strong><span>Departments, workflows and the systems already in place.</span></li>
+        <li><strong>A clear line</strong><span>Where AI will materially help, and where it would be overkill.</span></li>
+        <li><strong>A costed roadmap</strong><span>What to do now, what to do next, and what to leave alone.</span></li>
+        <li><strong>A security and data check</strong><span>Governance, privacy and POPIA built in from day one.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:8px">Why leaders choose it</h3>
+      <div class="quote" style="font-size:12.5pt;margin-top:8px">&ldquo;Training or tools scoped without an audit is guesswork. You end up paying to roll out things that do not suit the work.&rdquo;</div>
+      <p>The result is a roadmap you can act on: an immediate 12-month plan, or a 3 to 5 year view of how AI and agents should grow across the business.</p>
+      <span class="pill">Time saved</span><span class="pill">Costs reduced</span><span class="pill">Risk managed</span><span class="pill">Budget protected</span>
+    </div>
+  </div>
+  <div class="foot"><span>QuantumBerry AI</span><span>05</span></div>
+</section>
+
+<!-- 6 HERMES -->
+<section class="page dark" style="--z:1.22">
+  <div class="glow2"></div>
+  <div class="eyebrow">Service 2 &middot; Hermes AI Agents</div>
+  <h2 style="position:relative">An agent is <span class="grad">grown,</span> not installed.</h2>
+  <p class="lead" style="position:relative">Hermes is our agent platform. It learns your products, your people and your way of working, and builds a memory of your business that compounds with use. It does not start cold every morning.</p>
+  <div class="two" style="position:relative;margin-top:14px">
+    <div>
+      <h3>What it can take on</h3>
+      <ul class="check">
+        <li><strong>Inbox and admin</strong><span>Watches mail, drafts replies, books and organises.</span></li>
+        <li><strong>Reporting</strong><span>Weekly summaries and performance reports, written for you.</span></li>
+        <li><strong>Research and leads</strong><span>Finds prospects, researches them, prepares outreach.</span></li>
+        <li><strong>Content and follow-ups</strong><span>Drafts posts, newsletters and routine communication.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Why it is different</h3>
+      <ul class="check">
+        <li><strong>Private by design</strong><span>Your data and your rules, with clear approval steps.</span></li>
+        <li><strong>Built to move quickly</strong><span>Live in weeks, then cheap and easy to extend.</span></li>
+        <li><strong>Always on</strong><span>Works in the background, 24 hours a day.</span></li>
+        <li><strong>Humans stay in charge</strong><span>Your team reviews and approves what matters.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="tl" style="position:relative"><div><b>Week 1</b><span>Learns your tools and tasks</span></div><div><b>Month 1</b><span>Handles routine work</span></div><div><b>Month 6</b><span>Knows your business like a colleague</span></div></div>
+  <div class="foot"><span>QuantumBerry AI</span><span>06</span></div>
+</section>
+
+<!-- 7 SECURITY + BUILD -->
+<section class="page tint" style="--z:1.3">
+  <div class="eyebrow">Services 3 and 4</div>
+  <h2>Stay protected. Move fast.</h2>
+  <div class="two" style="margin-top:6px">
+    <div class="card" style="border-top-color:var(--mint);padding:22px">
+      <div class="ico">&#x1F6E1;</div><h3>AI Security</h3>
+      <p style="color:var(--text);font-weight:700">Attacks are now powered by AI. Defence has to be too.</p>
+      <ul class="check">
+        <li><strong>AI-driven testing</strong><span>Scans your domains and platforms for weak points.</span></li>
+        <li><strong>Prevent disruption</strong><span>Helps stop defacement, downtime and data loss.</span></li>
+        <li><strong>A certified standard</strong><span>Security assurance built on leading AI security tooling.</span></li>
+      </ul>
+    </div>
+    <div class="card" style="border-top-color:#F472B6;padding:22px">
+      <div class="ico">&#x1F680;</div><h3>AI Websites and Apps</h3>
+      <p style="color:var(--text);font-weight:700">From idea to working platform in weeks, not months.</p>
+      <ul class="check">
+        <li><strong>Websites and portals</strong><span>Fast, modern, secure, and easy to update.</span></li>
+        <li><strong>Custom business apps</strong><span>Booking, stock, customer databases, dashboards.</span></li>
+        <li><strong>Phased and affordable</strong><span>Approve and pay one phase at a time.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="quote" style="margin-top:22px">Every build comes with AI baked in, security from the start, and a roadmap for what to add next.</div>
+  <div class="foot"><span>QuantumBerry AI</span><span>07</span></div>
+</section>
+
+<!-- 8 CLOSING -->
+<section class="page dark" style="--z:1.3">
+  <div class="glow1"></div>
+  <div class="eyebrow">Let's talk</div>
+  <h2 style="position:relative">Ready to see what AI can do <span class="grad">for you?</span></h2>
+  <p class="lead" style="position:relative">A short conversation is all it takes to find out where your business stands and where the first quick wins are.</p>
+  <div class="tl" style="position:relative"><div><b>Step 1</b><span>Short intro call</span></div><div><b>Step 2</b><span>AI audit and roadmap</span></div><div><b>Step 3</b><span>Pilot build</span></div><div><b>Step 4</b><span>Scale and support</span></div></div>
+  <div class="who" style="position:relative"><div class="avatar">CD</div><div><h3 style="margin:0;color:#fff">Chad Douglas</h3><div style="color:#C7CBE6;font-size:10.5pt">Founder and CEO, QuantumBerry AI &middot; Certified Ethical Hacker (CEH)<br>Cape Town, South Africa</div></div></div>
+  <div class="cta" style="position:relative">
+    <h3>Book a conversation</h3>
+    <p>Pick a time that suits you. No pressure, no jargon.</p>
+    <div class="contact">
+      <div><small>Book</small><a href="https://cal.com/quantumberry/ai-discussion">cal.com/quantumberry/ai-discussion</a></div>
+      <div><small>Email</small><a href="mailto:chad@quantumberryai.co.za">chad@quantumberryai.co.za</a></div>
+      <div><small>Web</small><a href="https://www.quantumberryai.co.za">quantumberryai.co.za</a></div>
+    </div>
+  </div>
+  <p style="position:relative;margin-top:22px;text-align:center;color:#8A90B0;letter-spacing:.2em;font-size:9pt;text-transform:uppercase">Intelligent systems. Real world impact.</p>
+  <div class="foot"><span>QuantumBerry AI</span><span>08</span></div>
+</section>
+
+</body>
+</html>
