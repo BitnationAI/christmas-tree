@@ -1,0 +1,317 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>QuantumBerry AI | Titans Kit Design Prompt Pack</title><style>
+@font-face{font-family:"Syne";font-weight:600;src:url(../dr-faul-pack/assets/fonts/syne-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Syne";font-weight:700;src:url(../dr-faul-pack/assets/fonts/syne-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Syne";font-weight:800;src:url(../dr-faul-pack/assets/fonts/syne-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:300;src:url(../dr-faul-pack/assets/fonts/dm-sans-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:400;src:url(../dr-faul-pack/assets/fonts/dm-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:500;src:url(../dr-faul-pack/assets/fonts/dm-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:700;src:url(../dr-faul-pack/assets/fonts/dm-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Mono";font-weight:400;src:url(../dr-faul-pack/assets/fonts/dm-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(../dr-faul-pack/assets/fonts/dm-mono-latin-500-normal.woff2) format("woff2")}
+
+@page{size:A4;margin:0}
+:root{--bg:#0B0B0B;--red:#C0392B;--blue:#1571AA;--ink:#2C2C2C;--mute:#5E5E5E;--line:#ECEBEB;--panel:#F4F2F2;--navy:#213A52}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"DM Sans",sans-serif;font-weight:400;font-size:10pt;line-height:1.55;color:var(--ink)}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;background:#fff;padding:0 17mm}
+.page:last-child{page-break-after:auto;break-after:auto}
+.mono{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.22em}
+.syne{font-family:"Syne",sans-serif}
+
+/* interior header and footer */
+.hd{position:absolute;left:17mm;right:17mm;top:11mm;display:flex;justify-content:space-between;align-items:flex-start}
+.brand{display:flex;gap:9px;align-items:center}
+.brand img{height:11mm}
+.brand b{display:block;font-family:"Syne";font-weight:800;font-size:13.5pt;line-height:1;color:#111}
+.brand small{display:block;font-family:"DM Mono";font-size:4.8pt;letter-spacing:.3em;color:var(--blue);margin-top:3px}
+.hd .r{text-align:right;font-family:"DM Mono";font-size:5.6pt;letter-spacing:.24em;color:#9a9a9a;line-height:1.7}
+.hdrule{position:absolute;left:17mm;top:26mm;width:9mm;height:1.2mm;background:var(--red)}
+.ft{position:absolute;left:17mm;right:17mm;bottom:9mm;border-top:1px solid var(--line);padding-top:3.5mm;display:flex;justify-content:space-between;font-family:"DM Mono";font-size:5.4pt;letter-spacing:.24em;color:#9a9a9a;text-transform:uppercase}
+.ft b{color:var(--blue);font-weight:500}
+.body{position:absolute;left:17mm;right:17mm;top:34mm;bottom:20mm}
+
+.sec{display:flex;align-items:baseline;gap:12px;margin-bottom:2.5mm}
+.sec .n{font-family:"DM Mono";font-weight:500;font-size:9pt;color:var(--blue);letter-spacing:.1em}
+.sec h2{font-family:"Syne";font-weight:700;font-size:22pt;line-height:1.1;color:#111;letter-spacing:-.01em}
+.rule{width:12mm;height:.9mm;background:var(--red);margin:0 0 5mm}
+.kick{font-family:"DM Mono";font-size:6.3pt;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:2mm}
+h3{font-family:"Syne";font-weight:700;font-size:11.5pt;color:#111;margin:5mm 0 2mm}
+p{margin-bottom:2.6mm}
+.lead{font-size:11pt;line-height:1.5;color:#333;font-weight:400}
+.sm{font-size:8.6pt;color:var(--mute)}
+
+.callout{background:var(--panel);border-left:1.3mm solid var(--red);padding:4.5mm 6mm;margin:5mm 0}
+.callout .k{font-family:"DM Mono";font-size:6pt;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:1.5mm}
+.callout p{margin:0;font-size:9.3pt}
+.bigq{font-family:"Syne";font-weight:800;font-size:19pt;line-height:1.15;letter-spacing:-.01em;color:#111;margin:6mm 0}
+.bigq em{font-style:normal;color:var(--red)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm}
+.card{border:1px solid var(--line);border-top:1mm solid var(--red);padding:4.5mm 5mm;background:#fff}
+.card.b{border-top-color:var(--blue)}
+.card h4{font-family:"Syne";font-weight:700;font-size:10.5pt;color:#111;margin-bottom:1.5mm}
+.card p{font-size:9pt;color:var(--mute);margin:0}
+.card .k{font-family:"DM Mono";font-size:5.8pt;letter-spacing:.28em;color:var(--blue);text-transform:uppercase;margin-bottom:2mm}
+
+ul.bl{list-style:none}
+ul.bl li{position:relative;padding:0 0 3.2mm 5mm;font-size:9.5pt}
+ul.bl li:before{content:"";position:absolute;left:0;top:2.2mm;width:1.5mm;height:1.5mm;background:var(--red)}
+ul.bl li b{font-weight:700;color:#111}
+
+table{width:100%;border-collapse:collapse;margin:3mm 0}
+th{font-family:"DM Mono";font-weight:500;font-size:5.8pt;letter-spacing:.26em;color:var(--blue);text-align:left;text-transform:uppercase;padding:2mm 3mm;border-bottom:1px solid var(--line)}
+td{padding:3mm 3mm;border-bottom:1px solid var(--line);font-size:8.9pt;vertical-align:top}
+td:first-child{font-weight:700;color:#111;white-space:nowrap}
+tr:nth-child(even) td{background:#fafafa}
+
+.stages{display:flex;gap:2.5mm;margin:4mm 0 3mm}
+.stage{flex:1;border-top:1mm solid var(--red);background:var(--panel);padding:3.5mm 3mm 4mm}
+.stage:nth-child(even){border-top-color:var(--blue)}
+.stage .n{font-family:"DM Mono";font-size:6pt;letter-spacing:.2em;color:var(--blue)}
+.stage b{display:block;font-family:"Syne";font-weight:700;font-size:10.5pt;margin:1mm 0 1.2mm;color:#111}
+.stage span{font-size:7.9pt;line-height:1.4;color:var(--mute);display:block}
+
+.steps .s{display:flex;gap:4mm;padding:2.6mm 0;border-bottom:1px solid var(--line)}
+.steps .s i{font-style:normal;font-family:"DM Mono";font-weight:500;color:var(--red);font-size:8.5pt;flex:0 0 7mm}
+.steps .s b{display:block;font-size:9.4pt;color:#111}
+.steps .s span{font-size:8.6pt;color:var(--mute);line-height:1.45}
+.cross:before,.cross:after{content:"+";position:absolute;color:#c9d3dc;font-family:"DM Mono";font-size:10pt}
+
+/* dark pages */
+.dark{background:var(--bg);color:#fff;
+ background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+ background-size:15.2mm 15.2mm;background-position:2mm 2mm}
+.topbar{position:absolute;left:0;top:0;height:1.4mm;width:100%;background:linear-gradient(90deg,var(--red) 0 28%,var(--blue) 28% 42%,transparent 42%)}
+.cover .lockup{position:absolute;left:19mm;top:44mm;display:flex;gap:7mm;align-items:center}
+.cover .lockup img{height:27mm}
+.cover .lockup b{display:block;font-family:"Syne";font-weight:800;font-size:27pt;line-height:1;color:#f4f4f4;letter-spacing:-.01em}
+.cover .lockup small{display:block;font-family:"DM Mono";font-size:6.2pt;letter-spacing:.3em;color:var(--blue);margin-top:3.2mm;text-transform:uppercase}
+.cover .redbar{position:absolute;left:19mm;top:84mm;width:15mm;height:.9mm;background:var(--red)}
+.cover .lab{position:absolute;left:19mm;top:94mm;font-family:"DM Mono";font-size:6.6pt;letter-spacing:.34em;color:var(--blue);text-transform:uppercase}
+.cover h1{position:absolute;left:19mm;top:104mm;font-family:"Syne";font-weight:800;font-size:49pt;line-height:1.06;letter-spacing:-.015em;color:#f6f6f6}
+.cover h1 em{font-style:normal;color:var(--red)}
+.cover .sub{position:absolute;left:19mm;top:192mm;width:140mm;font-size:11pt;line-height:1.55;color:#c9c9c9;font-weight:300}
+.cover .meta{position:absolute;left:19mm;right:19mm;top:222mm;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;display:flex}
+.cover .meta div{flex:1;padding:4mm 5mm;border-left:1px solid #2a2a2a}
+.cover .meta div:first-child{border-left:0;padding-left:0}
+.cover .meta small{display:block;font-family:"DM Mono";font-size:5.4pt;letter-spacing:.3em;color:#777;text-transform:uppercase;margin-bottom:1.5mm}
+.cover .meta b{display:block;font-size:9.5pt;color:#fff}
+.cover .meta span{font-size:8.2pt;color:#888}
+.cover .tag{position:absolute;left:19mm;top:248mm;font-family:"DM Mono";font-size:6.4pt;letter-spacing:.34em;color:#aaa;text-transform:uppercase}
+.cover .tag b{color:var(--red);font-weight:500;margin-left:12mm}
+.cover .cl{position:absolute;left:19mm;right:19mm;top:258mm;border-top:1px solid #222;padding-top:3.5mm;display:flex;justify-content:space-between;font-family:"DM Mono";font-size:5.6pt;letter-spacing:.26em;color:#666;text-transform:uppercase}
+
+/* back cover */
+.back .img{position:absolute;left:0;top:0;width:210mm;height:150mm;background:url(../dr-faul-pack/assets/capetown.jpg) center top/cover;}
+.back .fade{position:absolute;left:0;top:105mm;width:100%;height:45mm;background:linear-gradient(transparent,#0B0B0B)}
+.back .lab{position:absolute;left:19mm;top:158mm;font-family:"DM Mono";font-size:6.4pt;letter-spacing:.34em;color:var(--blue);text-transform:uppercase}
+.back h2{position:absolute;left:19mm;top:166mm;font-family:"Syne";font-weight:800;font-size:27pt;line-height:1.1;letter-spacing:-.01em;color:#f6f6f6}
+.back h2 em{font-style:normal;color:var(--red)}
+.back .cta{position:absolute;left:19mm;right:19mm;top:197mm}
+.back .cta p{font-size:10pt;color:#c9c9c9;font-weight:300;margin-bottom:5mm;width:150mm}
+.back .row{display:flex;gap:6mm;border-top:1px solid #2a2a2a;padding-top:4mm}
+.back .row div{flex:1}.back .row div:first-child{flex:1.9}.back .row div:last-child{flex:.9}
+.back .row small{display:block;font-family:"DM Mono";font-size:5.4pt;letter-spacing:.3em;color:#777;text-transform:uppercase;margin-bottom:1.5mm}
+.back .row b{font-size:8.6pt;color:#fff;font-weight:500}
+.back .steps4{display:flex;gap:3mm;margin-top:7mm}
+.back .steps4 div{flex:1;border-top:1mm solid var(--red);padding-top:2.5mm}
+.back .steps4 div:nth-child(even){border-top-color:var(--blue)}
+.back .steps4 small{display:block;font-family:"DM Mono";font-size:5.4pt;letter-spacing:.3em;color:#888}
+.back .steps4 b{font-size:8.6pt;color:#eee;font-weight:500}
+.back .tag{position:absolute;left:19mm;top:266mm;font-family:"DM Mono";font-size:6.4pt;letter-spacing:.34em;color:#aaa;text-transform:uppercase}
+.back .tag b{color:var(--red);font-weight:500;margin-left:12mm}
+.back .cl{position:absolute;left:19mm;right:19mm;top:278mm;border-top:1px solid #222;padding-top:3.5mm;display:flex;justify-content:space-between;font-family:"DM Mono";font-size:5.6pt;letter-spacing:.26em;color:#666;text-transform:uppercase}
+.strip{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:7mm}.strip span{flex:1;padding:4mm 0;font-family:'Syne';font-weight:700;font-size:10pt;color:#111}.strip i{font-style:normal;font-family:'DM Mono';font-weight:500;font-size:7pt;color:var(--red);margin-right:2mm}
+.code{background:#0F1115;color:#E8E6E3;font-family:"DM Mono",monospace;font-size:6.9pt;line-height:1.42;padding:4.5mm 5mm;border-left:1.3mm solid var(--red);white-space:pre-wrap;word-break:break-word}
+.code .k{color:#7FB8E0}.code .s{color:#F0D9A8}
+.fill{display:grid;grid-template-columns:auto 1fr;gap:0;margin:3mm 0 4mm;border-top:1px solid var(--line)}
+.fill div{padding:1.6mm 3mm;border-bottom:1px solid var(--line);font-size:8.4pt}
+.fill div:nth-child(odd){font-family:"DM Mono";font-weight:500;font-size:7pt;color:var(--blue);letter-spacing:.06em}
+.howto{display:flex;gap:2.5mm;margin:3mm 0 4mm}
+.howto div{flex:1;background:var(--panel);padding:2.6mm 3mm;font-size:8pt;line-height:1.4;color:var(--mute);border-top:.8mm solid var(--blue)}
+.howto b{display:block;color:#111;font-size:8.4pt;margin-bottom:.6mm}
+</style></head><body><section class="page dark cover"><div class="topbar"></div>
+<div class="lockup"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>Applied AI Engineering Studio &nbsp;·&nbsp; Cape Town, South Africa</small></div></div>
+<div class="redbar"></div><div class="lab">AI Prompt Pack &nbsp;·&nbsp; Titans Cricket</div>
+<h1>Design the<br>new kit.<br><em>Keep every<br>logo intact.</em></h1>
+<div class="sub">A storyboard-first workflow and four copy-paste prompts for designing the Titans men's and women's playing shirts and pants in Gemini or ChatGPT.</div>
+<div class="meta"><div><small>Prepared for</small><b>Karen Smithies</b><span>Titans Cricket</span></div><div><small>Issued</small><b>October 2026</b><span>Revision 01</span></div><div><small>Reference</small><b>QB-TK-2026-01</b><span>Kit Design Prompts</span></div></div>
+<div class="tag">Intelligent systems. <b>Real world impact.</b></div>
+<div class="cl"><span>chad@quantumberryai.co.za</span><span>quantumberryai.co.za</span></div></section><section class="page"><div class="hd"><div class="brand"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>APPLIED AI ENGINEERING</small></div></div><div class="r">TITANS KIT DESIGN<br>NO. QB-TK-2026-01</div></div><div class="hdrule"></div><div class="body"><div class="sec"><span class="n">01</span><h2>How it works</h2></div><div class="rule"></div><p class="lead" style="font-size:10pt">Start with a storyboard, then refine one step at a time. Each prompt is written in JSON so every detail sits in its own labelled field and nothing gets forgotten.</p>
+<div class="grid3" style="margin-top:5mm">
+<div class="card"><div class="k">Why</div><h4>Storyboard first</h4><p>Each run gives one page per idea: front, back, side, pants, close-ups, colours and a player wearing it. Make three, pick one, and every later step uses it as the reference.</p></div>
+<div class="card b"><div class="k">Why</div><h4>JSON prompts</h4><p>Gemini and ChatGPT both read JSON well. Copy the whole block, swap the {CURLY} words for your choices, paste it in. The last line repeats the brief in plain English.</p></div>
+<div class="card"><div class="k">Rule</div><h4>Logos stay intact</h4><p>Every prompt uses the attached official logo files with strict rules. The supplier drawings leave the logo spaces blank, and the real files go on last.</p></div>
+</div>
+<h3>The workflow</h3>
+<div class="steps">
+<div class="s"><i>00</i><div><b>One-time setup</b><span>Create a Gemini Gem or ChatGPT Project called "Titans Kit Design". Upload the official logos as transparent PNGs (TITANS_CREST.png, MOMENTUM_MULTIPLY.png, FIDELITY.png, KIT_SUPPLIER.png), the brand colour codes, and front, back and side photos of the current kit.</span></div></div>
+<div class="s"><i>01</i><div><b>Storyboard</b><span>Prompt 1. Run three themes, compare the boards, pick one.</span></div></div>
+<div class="s"><i>02</i><div><b>Production flats</b><span>Prompt 2. Clean supplier drawings of the chosen kit with blank, labelled logo spaces.</span></div></div>
+<div class="s"><i>03</i><div><b>On-player hero shot</b><span>Prompt 3. A photoreal player in the kit for sign-off and social media.</span></div></div>
+<div class="s"><i>04</i><div><b>Small changes</b><span>Prompt 4. One change per message, so the AI never redoes the whole design.</span></div></div>
+<div class="s"><i>05</i><div><b>Logo check and finish</b><span>Zoom to 100% and compare every logo with the original file. Place the real logo files on the flats in Canva or Illustrator before anything goes to the supplier.</span></div></div>
+</div>
+<div class="callout"><div class="k">The golden rule</div><p><b>Attach the logo files to every prompt</b>, even inside the Gem or Project. Image tools follow attached files far more reliably than stored ones.</p></div></div><div class="ft"><span>QuantumBerry AI</span><span>Titans Kit Design Prompt Pack &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; quantumberryai.co.za</span><b>02</b></div></section><section class="page"><div class="hd"><div class="brand"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>APPLIED AI ENGINEERING</small></div></div><div class="r">TITANS KIT DESIGN<br>NO. QB-TK-2026-01</div></div><div class="hdrule"></div><div class="body"><div class="sec"><span class="n">02</span><h2>Prompt 1 &middot; Storyboard</h2></div><div class="rule"></div><p class="lead" style="font-size:10pt">Start here. Attach the logo files, fill in the words in {CURLY BRACKETS}, paste the block from the next page, and run it three times with three different themes.</p><div class="howto"><div><b>Attach</b>All the official logo files</div><div><b>Fill in</b>The words in {CURLY BRACKETS} below</div><div><b>Run</b>Three times, three themes, then pick one board</div></div><div class="fill"><div>CONCEPT_NAME</div><div>A name for the idea, e.g. Northern Thunder</div><div>THEME</div><div>Pride of the north, lightning, heritage, modern speed or fan culture</div><div>TEAM</div><div>Momentum Multiply Titans (men) or Fidelity Titans (women)</div><div>FIT</div><div>Men's athletic fit or women's tailored fit</div><div>MAIN_SPONSOR_FILE</div><div>MOMENTUM_MULTIPLY.png or FIDELITY.png</div><div>PRIMARY / SECONDARY / ACCENT_HEX</div><div>Colour codes, e.g. #0B2D5B</div><div>PATTERN_IDEA</div><div>e.g. subtle lightning lines, a diamond weave</div><div>FORMAT</div><div>One-day or T20</div></div><h3>What you get back</h3><div class="grid2" style="margin-top:3mm">
+<div class="card"><div class="k">Shirt</div><h4>Front, back and side</h4><p>Symmetrical front view, back with name and number, side view showing sleeve and side panels.</p></div>
+<div class="card b"><div class="k">Pants</div><h4>Front and back</h4><p>Tapered playing pants with matching panels and piping.</p></div>
+<div class="card b"><div class="k">Details</div><h4>Close-ups and colours</h4><p>Collar, cuff, fabric texture, waistband, plus colour chips with hex codes and a number font sample.</p></div>
+<div class="card"><div class="k">Mood</div><h4>On a player</h4><p>A small image of a cricketer wearing the kit in a floodlit stadium.</p></div></div>
+<div class="callout"><div class="k">Tip</div><p>If a board puts a pattern over a logo or adds a sponsor that isn't attached, run it again rather than editing. The storyboard is cheap; the later steps rely on it being right.</p></div></div><div class="ft"><span>QuantumBerry AI</span><span>Titans Kit Design Prompt Pack &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; quantumberryai.co.za</span><b>03</b></div></section><section class="page"><div class="hd"><div class="brand"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>APPLIED AI ENGINEERING</small></div></div><div class="r">TITANS KIT DESIGN<br>NO. QB-TK-2026-01</div></div><div class="hdrule"></div><div class="body"><div class="kick">Prompt 1 &middot; Storyboard &middot; copy this whole block</div><div class="code">{
+  <span class="k">&quot;meta&quot;</span>: {
+    <span class="k">&quot;role&quot;</span>: &quot;Senior sportswear designer creating a professional kit concept board&quot;,
+    <span class="k">&quot;output&quot;</span>: &quot;One landscape concept board, 16:9, clean studio presentation&quot;
+  },
+  <span class="k">&quot;brief&quot;</span>: {
+    <span class="k">&quot;team&quot;</span>: &quot;{TEAM}&quot;,
+    <span class="k">&quot;concept_name&quot;</span>: &quot;{CONCEPT_NAME}&quot;,
+    <span class="k">&quot;theme&quot;</span>: &quot;{THEME}&quot;,
+    <span class="k">&quot;format&quot;</span>: &quot;{FORMAT} coloured cricket playing kit&quot;,
+    <span class="k">&quot;colours&quot;</span>: {<span class="k">&quot;primary&quot;</span>: &quot;{PRIMARY_HEX}&quot;, <span class="k">&quot;secondary&quot;</span>: &quot;{SECONDARY_HEX}&quot;, <span class="k">&quot;accent&quot;</span>: &quot;{ACCENT_HEX}&quot;},
+    <span class="k">&quot;pattern_idea&quot;</span>: &quot;{PATTERN_IDEA}, integrated subtly into side panels and sleeves, never over logo areas&quot;
+  },
+  <span class="k">&quot;board_layout&quot;</span>: {
+    <span class="k">&quot;panel_1&quot;</span>: &quot;Hero front view of the playing shirt, flat lay, perfectly symmetrical&quot;,
+    <span class="k">&quot;panel_2&quot;</span>: &quot;Back view of the shirt with player name across the shoulders and a large number centred&quot;,
+    <span class="k">&quot;panel_3&quot;</span>: &quot;Side view showing sleeve, side panel and seam lines&quot;,
+    <span class="k">&quot;panel_4&quot;</span>: &quot;Cricket playing pants, front and back views, matching panels and piping&quot;,
+    <span class="k">&quot;panel_5&quot;</span>: &quot;Detail close-ups: collar, sleeve cuff, fabric texture (breathable athletic mesh), side vent, waistband&quot;,
+    <span class="k">&quot;panel_6&quot;</span>: &quot;Colour chips with hex codes and a sample of the number and lettering font&quot;,
+    <span class="k">&quot;panel_7&quot;</span>: &quot;Small mood image of a professional cricketer wearing the kit in a floodlit stadium&quot;
+  },
+  <span class="k">&quot;garment_specs&quot;</span>: {
+    <span class="k">&quot;shirt&quot;</span>: &quot;Short sleeve, modern athletic cut, polo or V collar with placket, raglan sleeves, ventilated mesh side panels, sublimated print&quot;,
+    <span class="k">&quot;pants&quot;</span>: &quot;Tapered cricket playing trousers, elasticated waist with drawcord, side panels in kit colours, piping down the outer leg&quot;,
+    <span class="k">&quot;fit&quot;</span>: &quot;{FIT}&quot;
+  },
+  <span class="k">&quot;logo_placement&quot;</span>: {
+    <span class="k">&quot;left_chest&quot;</span>: &quot;TITANS_CREST.png&quot;,
+    <span class="k">&quot;centre_chest&quot;</span>: &quot;{MAIN_SPONSOR_FILE}&quot;,
+    <span class="k">&quot;right_chest&quot;</span>: &quot;KIT_SUPPLIER.png&quot;,
+    <span class="k">&quot;sleeve&quot;</span>: &quot;Secondary sponsor file if attached, otherwise leave blank&quot;,
+    <span class="k">&quot;pants_left_thigh&quot;</span>: &quot;TITANS_CREST.png, small&quot;
+  },
+  <span class="k">&quot;logo_rules&quot;</span>: {
+    <span class="k">&quot;source&quot;</span>: &quot;ATTACHED OFFICIAL LOGO FILES&quot;,
+    <span class="k">&quot;strictness&quot;</span>: &quot;Critical&quot;,
+    <span class="k">&quot;instruction&quot;</span>: &quot;Reproduce every attached logo exactly as supplied: identical shapes, letters, colours, spacing and proportions. Never redraw, restyle, recolour, simplify, warp, crop, outline or add effects. Scale uniformly only. Logos sit flat on the fabric following its curve, nothing more.&quot;,
+    <span class="k">&quot;if_unsure&quot;</span>: &quot;Leave a clean blank rectangle labelled with the logo file name instead of guessing.&quot;
+  },
+  <span class="k">&quot;style&quot;</span>: {
+    <span class="k">&quot;render&quot;</span>: &quot;Photorealistic fabric with realistic seams, stitching and drape, clean neutral grey studio background, soft even lighting&quot;,
+    <span class="k">&quot;presentation&quot;</span>: &quot;Premium sportswear brand concept board, tidy grid, small panel labels&quot;
+  },
+  <span class="k">&quot;negative_constraints&quot;</span>: [
+    &quot;No redrawn or invented logos&quot;,
+    &quot;No extra sponsors&quot;,
+    &quot;No misspelt text&quot;,
+    &quot;No cartoon style&quot;,
+    &quot;No distorted garments&quot;,
+    &quot;No pattern over logo areas&quot;,
+    &quot;No watermarks&quot;
+  ],
+  <span class="k">&quot;combined_prompt_text&quot;</span>: &quot;Professional sportswear concept board, 16:9, for the {TEAM} {FORMAT} cricket playing kit, concept &#x27;{CONCEPT_NAME}&#x27;, theme {THEME}, colours {PRIMARY_HEX} / {SECONDARY_HEX} / {ACCENT_HEX}, {FIT}. Panels: front shirt, back shirt with name and number, side view, pants front and back, detail close-ups, colour chips, small on-player mood shot. Use the attached official logo files exactly as supplied in the stated positions, never redrawn or restyled; if unsure, leave a labelled blank box. Photoreal fabric, clean grey studio background.&quot;
+}</div></div><div class="ft"><span>QuantumBerry AI</span><span>Titans Kit Design Prompt Pack &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; quantumberryai.co.za</span><b>04</b></div></section><section class="page"><div class="hd"><div class="brand"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>APPLIED AI ENGINEERING</small></div></div><div class="r">TITANS KIT DESIGN<br>NO. QB-TK-2026-01</div></div><div class="hdrule"></div><div class="body"><div class="sec"><span class="n">03</span><h2>Prompt 2 &middot; Production flats</h2></div><div class="rule"></div><p class="lead" style="font-size:10pt">Attach the storyboard you picked. The AI draws clean front, back and side drawings for the supplier and deliberately leaves the logo spaces empty.</p><div class="howto"><div><b>Attach</b>The chosen storyboard image</div><div><b>Paste</b>Prompt 2 exactly as is</div><div><b>Then</b>Place the real logo files into the blank boxes in Canva or Illustrator</div></div><div class="code">{
+  <span class="k">&quot;meta&quot;</span>: {
+    <span class="k">&quot;role&quot;</span>: &quot;Technical sportswear designer preparing flats for a kit supplier&quot;,
+    <span class="k">&quot;output&quot;</span>: &quot;Two images: 1) shirt front, back and side; 2) pants front and back. White background, 4:3&quot;
+  },
+  <span class="k">&quot;reference&quot;</span>: {
+    <span class="k">&quot;source&quot;</span>: &quot;ATTACHED CHOSEN STORYBOARD&quot;,
+    <span class="k">&quot;strictness&quot;</span>: &quot;Critical&quot;,
+    <span class="k">&quot;instruction&quot;</span>: &quot;Keep the design, colours, panels, pattern and proportions exactly as in the chosen concept.&quot;
+  },
+  <span class="k">&quot;style&quot;</span>: &quot;Clean technical flat illustration, precise outlines, accurate seams and stitch lines, flat colour fills using the exact hex codes, no shading, no model&quot;,
+  <span class="k">&quot;logo_zones&quot;</span>: {
+    <span class="k">&quot;instruction&quot;</span>: &quot;Do NOT draw any logo. Leave each logo position as a clean white rectangle with a thin grey border and a small label.&quot;,
+    <span class="k">&quot;zones&quot;</span>: [
+      &quot;LEFT CHEST: TITANS CREST&quot;,
+      &quot;CENTRE CHEST: MAIN SPONSOR&quot;,
+      &quot;RIGHT CHEST: KIT SUPPLIER&quot;,
+      &quot;SLEEVE: SECONDARY SPONSOR&quot;,
+      &quot;PANTS LEFT THIGH: TITANS CREST&quot;
+    ]
+  },
+  <span class="k">&quot;annotations&quot;</span>: [
+    &quot;Collar style&quot;,
+    &quot;Fabric: breathable athletic mesh&quot;,
+    &quot;Panel colours with hex codes&quot;,
+    &quot;Name and number area on the back&quot;
+  ],
+  <span class="k">&quot;negative_constraints&quot;</span>: [
+    &quot;No logos or brand marks of any kind&quot;,
+    &quot;No invented text&quot;,
+    &quot;No perspective distortion&quot;,
+    &quot;No background scenery&quot;
+  ],
+  <span class="k">&quot;combined_prompt_text&quot;</span>: &quot;Technical flats of the attached chosen Titans kit concept, design unchanged. Image 1: shirt front, back and side. Image 2: pants front and back. White background, precise outlines, exact hex colour fills, no shading. Do not draw any logos: leave a labelled blank rectangle at each logo position. Add short annotations for collar, fabric and panel colours.&quot;
+}</div><div class="callout"><div class="k">Why blank logo spaces</div><p>Image AI can still slightly redraw a logo, even with strict rules. Leaving the spaces blank and placing the official files yourself is the only way to guarantee every logo is 100% correct on what goes to the supplier.</p></div></div><div class="ft"><span>QuantumBerry AI</span><span>Titans Kit Design Prompt Pack &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; quantumberryai.co.za</span><b>05</b></div></section><section class="page"><div class="hd"><div class="brand"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>APPLIED AI ENGINEERING</small></div></div><div class="r">TITANS KIT DESIGN<br>NO. QB-TK-2026-01</div></div><div class="hdrule"></div><div class="body"><div class="sec"><span class="n">04</span><h2>Prompt 3 &middot; On-player hero shot</h2></div><div class="rule"></div><p class="lead" style="font-size:10pt">Attach the chosen kit image and the logo files. This gives the team a real-looking photo for sign-off and social media.</p><div class="howto"><div><b>Attach</b>Chosen kit image plus the logo files</div><div><b>Fill in</b>The words in {CURLY BRACKETS} below</div><div><b>Use it for</b>Sign-off, launch posts and sponsor previews</div></div><div class="fill"><div>CRICKETER</div><div>e.g. fast bowler, mid-20s</div><div>ACTION</div><div>e.g. at the point of delivery</div><div>MAIN_WORD</div><div>RISE, ROAR, TITANS or BELIEVE</div><div>ENVIRONMENT</div><div>e.g. floodlit night match at a packed stadium</div><div>ACCENT_HEX</div><div>The accent colour from the chosen kit</div></div><h3>What makes it look real</h3><ul class="bl">
+<li><b>Connected perspective:</b> body, arm, hand and bat or ball form one believable line toward the camera.</li>
+<li><b>Real skin and sweat,</b> not plastic or airbrushed.</li>
+<li><b>Floodlight rim light</b> outlining the player against a full-bleed stadium.</li>
+<li><b>One bold word</b> behind the player in the kit's accent colour, partly hidden by the body for depth.</li></ul>
+<div class="callout"><div class="k">Check before sharing</div><p>Look closely at hands, the bat and every logo. If a logo is off, place the official file over it in Canva before the image is used anywhere.</p></div></div><div class="ft"><span>QuantumBerry AI</span><span>Titans Kit Design Prompt Pack &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; quantumberryai.co.za</span><b>06</b></div></section><section class="page"><div class="hd"><div class="brand"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>APPLIED AI ENGINEERING</small></div></div><div class="r">TITANS KIT DESIGN<br>NO. QB-TK-2026-01</div></div><div class="hdrule"></div><div class="body"><div class="kick">Prompt 3 &middot; On-player hero shot &middot; copy this whole block</div><div class="code">{
+  <span class="k">&quot;meta&quot;</span>: {
+    <span class="k">&quot;role&quot;</span>: &quot;Elite sports campaign photographer and retoucher&quot;,
+    <span class="k">&quot;output&quot;</span>: &quot;One photorealistic campaign image, 9:16 vertical&quot;
+  },
+  <span class="k">&quot;subject&quot;</span>: {
+    <span class="k">&quot;who&quot;</span>: &quot;Adult professional cricketer, {CRICKETER}&quot;,
+    <span class="k">&quot;skin_and_face&quot;</span>: &quot;Natural skin texture, real sweat sheen, focused determined expression&quot;
+  },
+  <span class="k">&quot;wardrobe&quot;</span>: {
+    <span class="k">&quot;source&quot;</span>: &quot;ATTACHED CHOSEN KIT DESIGN&quot;,
+    <span class="k">&quot;strictness&quot;</span>: &quot;Critical&quot;,
+    <span class="k">&quot;instruction&quot;</span>: &quot;Dress the player in the attached kit exactly: same colours, panels, pattern, collar and pants. Fabric stretches and folds naturally with the movement.&quot;
+  },
+  <span class="k">&quot;logo_rules&quot;</span>: {
+    <span class="k">&quot;source&quot;</span>: &quot;ATTACHED OFFICIAL LOGO FILES&quot;,
+    <span class="k">&quot;strictness&quot;</span>: &quot;Critical&quot;,
+    <span class="k">&quot;instruction&quot;</span>: &quot;Reproduce every attached logo exactly as supplied: identical shapes, letters, colours, spacing and proportions. Never redraw, restyle, recolour, simplify, warp, crop, outline or add effects. Scale uniformly only. Logos sit flat on the fabric following its curve, nothing more.&quot;,
+    <span class="k">&quot;if_unsure&quot;</span>: &quot;Leave a clean blank rectangle labelled with the logo file name instead of guessing.&quot;
+  },
+  <span class="k">&quot;action&quot;</span>: {
+    <span class="k">&quot;pose&quot;</span>: &quot;{ACTION}&quot;,
+    <span class="k">&quot;perspective&quot;</span>: &quot;Connected forced perspective: body, arm, hand and bat or ball form one continuous believable line toward the camera&quot;,
+    <span class="k">&quot;motion&quot;</span>: &quot;Frozen peak moment, fine dust or grass flecks in the air&quot;
+  },
+  <span class="k">&quot;typography&quot;</span>: {
+    <span class="k">&quot;main_word&quot;</span>: &quot;{MAIN_WORD}&quot;,
+    <span class="k">&quot;style&quot;</span>: &quot;Huge bold condensed letters behind the player, colour {ACCENT_HEX}, partly hidden by the player&#x27;s body for depth&quot;,
+    <span class="k">&quot;rule&quot;</span>: &quot;Spell the word exactly, no other text anywhere&quot;
+  },
+  <span class="k">&quot;environment&quot;</span>: {<span class="k">&quot;setting&quot;</span>: &quot;{ENVIRONMENT}&quot;, <span class="k">&quot;framing&quot;</span>: &quot;Full-bleed stadium background, no borders, no footer band&quot;},
+  <span class="k">&quot;lighting&quot;</span>: &quot;Dramatic floodlight rim light outlining the player, soft fill on the face, crisp contrast&quot;,
+  <span class="k">&quot;camera&quot;</span>: {
+    <span class="k">&quot;lens&quot;</span>: &quot;35mm&quot;,
+    <span class="k">&quot;aspect_ratio&quot;</span>: &quot;9:16&quot;,
+    <span class="k">&quot;focus&quot;</span>: &quot;Tack-sharp on the player and kit, background gently blurred&quot;
+  },
+  <span class="k">&quot;negative_constraints&quot;</span>: [
+    &quot;No floating or duplicated equipment&quot;,
+    &quot;No distorted hands or extra fingers&quot;,
+    &quot;No plastic or airbrushed skin&quot;,
+    &quot;No redrawn, warped or invented logos&quot;,
+    &quot;No extra sponsors&quot;,
+    &quot;No footer band or frame&quot;,
+    &quot;No misspelt text&quot;
+  ],
+  <span class="k">&quot;combined_prompt_text&quot;</span>: &quot;Photorealistic 9:16 cricket campaign image of an adult professional cricketer, {CRICKETER}, {ACTION}, wearing the attached Titans kit exactly as designed. Connected forced perspective toward the camera, frozen peak moment. Huge condensed word &#x27;{MAIN_WORD}&#x27; in {ACCENT_HEX} behind the player, partly hidden by the body. {ENVIRONMENT}, full-bleed stadium, floodlight rim light, 35mm, tack-sharp subject. Use the attached official logo files exactly as supplied, never redrawn. No distorted hands, no floating equipment, no plastic skin, no footer band.&quot;
+}</div></div><div class="ft"><span>QuantumBerry AI</span><span>Titans Kit Design Prompt Pack &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; quantumberryai.co.za</span><b>07</b></div></section><section class="page"><div class="hd"><div class="brand"><img src="../dr-faul-pack/assets/emblem.png" alt=""><div><b>QuantumBerry AI</b><small>APPLIED AI ENGINEERING</small></div></div><div class="r">TITANS KIT DESIGN<br>NO. QB-TK-2026-01</div></div><div class="hdrule"></div><div class="body"><div class="sec"><span class="n">05</span><h2>Prompt 4 &middot; Small changes</h2></div><div class="rule"></div><p class="lead" style="font-size:10pt">Use this whenever you want to adjust one thing. It stops the AI from redoing the whole design.</p><div class="howto"><div><b>Attach</b>The image you want to adjust</div><div><b>Change</b>One thing per message</div><div><b>ChatGPT tip</b>Use the select tool to paint over only the area to change</div></div><div class="code">{
+  <span class="k">&quot;edit_mode&quot;</span>: &quot;Surgical edit of the attached image&quot;,
+  <span class="k">&quot;change_only&quot;</span>: &quot;{ONE CHANGE, for example: make the collar {ACCENT_HEX}}&quot;,
+  <span class="k">&quot;keep_identical&quot;</span>: [
+    &quot;Every logo, pixel for pixel&quot;,
+    &quot;All other colours&quot;,
+    &quot;Pattern and panel layout&quot;,
+    &quot;Garment shape and proportions&quot;,
+    &quot;Background, lighting and camera angle&quot;
+  ],
+  <span class="k">&quot;rule&quot;</span>: &quot;If the change would affect anything in keep_identical, change less, not more.&quot;
+}</div><h3>Women's kit</h3><p>Run Prompt 1 again with <b>TEAM</b> = Fidelity Titans, <b>FIT</b> = women's tailored fit and <b>MAIN_SPONSOR_FILE</b> = FIDELITY.png. Keep the same concept name and colours so the two kits read as one family.</p>
+<h3>Gemini or ChatGPT?</h3><p>Both work. Gemini tends to hold a design steadier across edits; ChatGPT's select tool is the easiest way to change one small area. Try the same storyboard prompt in both and keep whichever you like.</p>
+<h3>Logo checklist before anything is approved</h3>
+<ul class="bl"><li><b>Zoom to 100%</b> and compare each logo with the original file, letter by letter.</li><li><b>Reject</b> any image with a changed letter, shape, colour or proportion.</li><li><b>Final files:</b> the official logos are placed by hand on the production flats.</li><li><b>No extra sponsors</b> or text the AI added on its own.</li></ul>
+<div class="callout"><div class="k">Next step</div><p>Chad will take you through these prompts on a short call and run the first storyboard with you.</p></div></div><div class="ft"><span>QuantumBerry AI</span><span>Titans Kit Design Prompt Pack &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; quantumberryai.co.za</span><b>08</b></div></section></body></html>

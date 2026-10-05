@@ -66,9 +66,10 @@ Reference files (Chad's Drive folder): QuantumBerry_AI_Company_Profile-1.pdf (A4
 The Dr Faul partner pack is built from `dr-faul-pack/template.html` with `python3 dr-faul-pack/build.py` (Chromium headless). Assets in `dr-faul-pack/assets`.
 
 ## AI image prompts for clients (kit, merch, campaigns)
-Storyboard first, then refine. Use JSON prompts with a `combined_prompt_text` summary. Logos follow a two-stage rule. First, attach the official logo files to every prompt, with strict `logo_rules`. Second, the production flats leave labelled blank logo zones, and the real logo files are placed in Canva or Illustrator. Make one change per edit, using the surgical-edit prompt with `keep_identical`. Karen (Titans) uses Gemini and ChatGPT. The source of the Titans kit pack is `titans-kit-prompts/gen.py`, which validates the JSON and writes the HTML and plain-text email.
+Storyboard first, then refine. Use JSON prompts with a `combined_prompt_text` summary. Logos follow a two-stage rule. First, attach the official logo files to every prompt, with strict `logo_rules`. Second, the production flats leave labelled blank logo zones, and the real logo files are placed in Canva or Illustrator. Make one change per edit, using the surgical-edit prompt with `keep_identical`. Karen (Titans) uses Gemini and ChatGPT. Prompts go in a branded PDF, not the email body: Chad prefers short client emails that say a PDF is attached and offer a call where he teaches the client. The source is `titans-kit-prompts/gen.py`, which holds the prompt definitions, and `python3 titans-kit-prompts/pack.py` builds the PDF, reusing the dr-faul-pack CSS and assets.
 
 ## Changelog
+- 5 Oct 2026: Karen's prompts moved into a branded 8-page PDF (QB-TK-2026-01). The email is now short and proposes a training call. Rule: client emails stay concise, and detail goes in an attached PDF.
 - 5 Oct 2026: Karen's kit-prompt email replaced with a storyboard-first JSON pack (4 prompts, men's and women's shirts and pants). Draft awaiting Chad's send. QUA-49 updated.
 - 5 Oct 2026: Booking link set to cal.com/quantumberry/30min-free-consult; Dr Faul pack and draft email updated.
 - 5 Oct 2026: Dr Faul partner pack rebuilt in the QuantumBerry brand (9 pages, no prices, no client names).
